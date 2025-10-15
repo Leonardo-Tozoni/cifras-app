@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.header .artist {
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* Song List */
+.song-list {
+  min-height: 100vh;
+}
+
+.songs-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.song-item {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.song-item:active {
+  transform: scale(0.98);
+  border-color: #667eea;
+}
+
+.song-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.song-artist {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+
+.song-chords {
+  font-size: 0.85rem;
+  color: #667eea;
+  font-weight: 500;
+}
+
+/* Chord Sheet */
+.chord-sheet {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background 0.2s;
+}
+
+.back-button:active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.chord-container {
+  padding: 1.5rem 1rem;
+}
+
+.chords-info {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+.chords-info strong {
+  color: #667eea;
+}
+
+.lyrics {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.chord-line-group {
+  margin-bottom: 0.2rem;
+  position: relative;
+}
+
+.chord-line {
+  position: relative;
+  height: 1rem;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #667eea;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.chord-above {
+  position: absolute;
+  white-space: nowrap;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 0.95rem;
+  padding-right: 0.2ch;
+}
+
+.text-line {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  color: #e0e0e0;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+.text-line:not(:empty) {
+  margin-bottom: 0.3rem;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.3rem;
+  }
+  
+  .song-title {
+    font-size: 1rem;
+  }
+  
+  .lyrics {
+    font-size: 0.9rem;
+  }
+  
+  .chord-above {
+    font-size: 0.85rem;
+  }
+  
+  .text-line {
+    font-size: 0.9rem;
+  }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .chord-container {
+    padding: 1rem;
+  }
+}
